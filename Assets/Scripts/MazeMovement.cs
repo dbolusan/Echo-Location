@@ -5,7 +5,7 @@ using UnityEngine;
 public class MazeMovement : MonoBehaviour
 {
 
-    public RigidBody2D rigidBody;       // Drag and drop RigidBody 2D
+    public Rigidbody2D rigidBody;       // Drag and drop RigidBody 2D
     public float swimSpeed = 40f;
     private float horizontalMove = 0f;
     private float verticalMove = 0f;
@@ -15,7 +15,7 @@ public class MazeMovement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        rigidBody = GetComponent<RigidBody2D>();
+        rigidBody = GetComponent<Rigidbody2D>();
         facingRight = true;
         upsideDown = false;
     }
@@ -23,8 +23,8 @@ public class MazeMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        horizontalMove = Input.GetAxisRaw("Horizontal") * runSpeed;
-        verticalMove = Input.GetAxisRaw("Vertical") * runSpeed;
+        horizontalMove = Input.GetAxisRaw("Horizontal") * swimSpeed;
+        verticalMove = Input.GetAxisRaw("Vertical") * swimSpeed;
     }
 
     private void FixedUpdate() {
