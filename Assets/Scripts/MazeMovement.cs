@@ -2,11 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MazeMovement : MonoBehaviour
+public class PlayerContoller : MonoBehaviour
 {
 
     public Rigidbody2D rigidBody;       // Drag and drop RigidBody 2D
-    public float swimSpeed = 40f;
+    public float swimSpeed = 250f;
     private float horizontalMove = 0f;
     private float verticalMove = 0f;
     public bool facingRight;
