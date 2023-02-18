@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerContoller : MonoBehaviour
+public class MazeMovement : MonoBehaviour
 {
 
     public Rigidbody2D rigidBody;       // Drag and drop RigidBody 2D
