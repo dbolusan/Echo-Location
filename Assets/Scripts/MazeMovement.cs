@@ -30,35 +30,46 @@ public class MazeMovement : MonoBehaviour
     private void FixedUpdate() {
         rigidBody.velocity = new Vector2(horizontalMove * Time.fixedDeltaTime, verticalMove * Time.fixedDeltaTime);
         
-        // if moving right and facing left
+        // if moving right
         if(horizontalMove > 0 && !facingRight) {
-            FlipHorizontal();
+            ChangeDirection();
+            horizontalMove = 1.0f;
+            facingRight = true;
         }
-        // if moving left and facing right
+        // if moving left
         else if (horizontalMove < 0 && facingRight) {
-            FlipHorizontal();
+            ChangeDirection();
+            horizontalMove = -1.0f;
+            facingRight = false;
         } 
-        // if moving upward and upside down
+        // if moving upward
         if(verticalMove > 0 && upsideDown) {
-            FlipVertical();
+            ChangeDirection();
+            verticalMove = -1.0f;
+            upsideDown = false;
         }
-        // if moving downward and right side up
+        // if moving downward
         else if (verticalMove < 0 && !upsideDown) {
-            FlipVertical();
+            ChangeDirection();
+            verticalMove = 1.0f;
+            upsideDown = true;
         }
     }
 
-    private void FlipHorizontal() {
-        facingRight = !facingRight;
-        Vector3 scale = transform.localScale;
-        scale.x  *= -1;
-        transform.localScale = scale;
-    }
-
-    private void FlipVertical() {
-        upsideDown = !upsideDown;
-        Vector3 scale = transform.localScale;
-        scale.y  *= -1;
-        transform.localScale = scale;
-    }
+    private void ChangeDirection () {
+        Quaternion rot = transform.localRotation;
+        if (Input.GetKey(KeyCode.RightArrow)) {
+            transform.localRotation = Quaternion.Euler(rot.x, 0.0f, 0);
+        }
+        if (Input.GetKey(KeyCode.LeftArrow)) {
+            transform.localRotation = Quaternion.Euler(rot.x, 180.0f, 0);
+        }
+        if (Input.GetKey(KeyCode.UpArrow)) {
+            transform.localRotation = Quaternion.Euler(rot.x, rot.y, 90.0f);
+        }
+        if (Input.GetKey(KeyCode.DownArrow)) {
+            transform.localRotation = Quaternion.Euler(rot.x, rot.y, 270.0f);
+        }
+     }
 }
+
