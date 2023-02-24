@@ -2370,7 +2370,7 @@ GameObject:
   - component: {fileID: 1445013648}
   - component: {fileID: 1445013650}
   m_Layer: 0
-  m_Name: MMMMMM
+  m_Name: Maze-Shell
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
