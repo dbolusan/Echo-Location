@@ -880,6 +880,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1435185223}
   - component: {fileID: 1435185222}
+  - component: {fileID: 1435185224}
   m_Layer: 0
   m_Name: Echo-Swim-0
   m_TagString: Untagged
@@ -954,6 +955,21 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1435185224
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1435185221}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 19fcf768b0ce8a64f85df5d93be5039c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spriteRenderer: {fileID: 0}
+  newSprite: {fileID: 21300000, guid: 722df8501e3147c4fa67b5795b3d2bf1, type: 3}
+  timeRemaining: 10
 --- !u!1 &1451524374
 GameObject:
   m_ObjectHideFlags: 0
