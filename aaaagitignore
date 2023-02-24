@@ -1,10 +1,6 @@
-.gitignore
-.vscode
-*.meta
-Assembly-CSharp.csproj
-Echo-Location.sln
-ProjectSettings/SceneTemplateSettings.json
-Library
-Logs
-Temp
-UserSettings
+*
+!Assets
+!ProjectSettings
+!Packages
+!aaaagitignore
+!README.md
