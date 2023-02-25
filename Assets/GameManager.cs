@@ -28,7 +28,7 @@ public class GameManager : MonoBehaviour
     [SerializeField]
     private float timeBetweenQuestions=1f;
     [SerializeField]
-    private int counter=1;
+    private static int counter=6;
     void Start() {
         if(unansweredQuestions==null||unansweredQuestions.Count==0) {
             unansweredQuestions = questions.ToList<Question>();
@@ -78,71 +78,91 @@ public class GameManager : MonoBehaviour
         animator.SetTrigger("Answered");
         if(currentQuestion.isA) {
             //Debug.Log("Correct!");
-            PlayerPrefs.SetInt("counter", PlayerPrefs.GetInt("counter")-1);
-            //counter-=1;
+            //PlayerPrefs.SetInt("counter", PlayerPrefs.GetInt("counter")-1);
+            counter-=1;
             if(counter==0) {
                 animator.SetTrigger("Zero");
+            }
+            else {
+                StartCoroutine(TransitionToNextQuestion());
             }
         }
         else {
             //Debug.Log("Incorrect!");
-            PlayerPrefs.SetInt("counter", 6);
-            //counter=6;
+            //PlayerPrefs.SetInt("counter", 6);
+            counter=6;
+            StartCoroutine(TransitionToNextQuestion());
         }
-        StartCoroutine(TransitionToNextQuestion());
+        Debug.Log(counter);
+        //StartCoroutine(TransitionToNextQuestion());
     }
 
     public void UserSelectB() {
         animator.SetTrigger("Answered");
         if(currentQuestion.isB) {
             //Debug.Log("Correct!");
-            PlayerPrefs.SetInt("counter", PlayerPrefs.GetInt("counter")-1);
-            //counter-=1;
+            //PlayerPrefs.SetInt("counter", PlayerPrefs.GetInt("counter")-1);
+            counter-=1;
             if(counter==0) {
                 animator.SetTrigger("Zero");
+            }
+            else {
+                StartCoroutine(TransitionToNextQuestion());
             }
         }
         else {
             //Debug.Log("Incorrect!");
-            PlayerPrefs.SetInt("counter", 6);
-            //counter=6;
+            //PlayerPrefs.SetInt("counter", 6);
+            counter=6;
+            StartCoroutine(TransitionToNextQuestion());
         }
-        StartCoroutine(TransitionToNextQuestion());
+        Debug.Log(counter);
+        //StartCoroutine(TransitionToNextQuestion());
     }
 
     public void UserSelectC() {
         animator.SetTrigger("Answered");
         if(currentQuestion.isC) {
             //Debug.Log("Correct!");
-            PlayerPrefs.SetInt("counter", PlayerPrefs.GetInt("counter")-1);
-            //counter-=1;
+            //PlayerPrefs.SetInt("counter", PlayerPrefs.GetInt("counter")-1);
+            counter-=1;
             if(counter==0) {
                 animator.SetTrigger("Zero");
+            }
+            else {
+                StartCoroutine(TransitionToNextQuestion());
             }
         }
         else {
             //Debug.Log("Incorrect!");
-            PlayerPrefs.SetInt("counter", 6);
-            //counter=6;
+            //PlayerPrefs.SetInt("counter", 6);
+            counter=6;
+            StartCoroutine(TransitionToNextQuestion());
         }
-        StartCoroutine(TransitionToNextQuestion());
+        Debug.Log(counter);
+        //StartCoroutine(TransitionToNextQuestion());
     }
 
     public void UserSelectD() {
         animator.SetTrigger("Answered");
         if(currentQuestion.isD) {
             //Debug.Log("Correct!");
-            PlayerPrefs.SetInt("counter", PlayerPrefs.GetInt("counter")-1);
-            //counter-=1;
+            //PlayerPrefs.SetInt("counter", PlayerPrefs.GetInt("counter")-1);
+            counter-=1;
             if(counter==0) {
                 animator.SetTrigger("Zero");
+            }
+            else {
+                StartCoroutine(TransitionToNextQuestion());
             }
         }
         else {
             //Debug.Log("Incorrect!");
-            PlayerPrefs.SetInt("counter", 6);
-            //counter=6;
+            //PlayerPrefs.SetInt("counter", 6);
+            counter=6;
+            StartCoroutine(TransitionToNextQuestion());
         }
-        StartCoroutine(TransitionToNextQuestion());
+        Debug.Log(counter);
+        //StartCoroutine(TransitionToNextQuestion());
     }
 }
