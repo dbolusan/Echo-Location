@@ -93,7 +93,6 @@ public class GameManager : MonoBehaviour
             counter=6;
             StartCoroutine(TransitionToNextQuestion());
         }
-        Debug.Log(counter);
         //StartCoroutine(TransitionToNextQuestion());
     }
 
