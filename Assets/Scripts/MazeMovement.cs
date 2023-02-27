@@ -6,7 +6,7 @@ public class MazeMovement : MonoBehaviour
 {
 
     public Rigidbody2D rigidBody;       // Drag and drop RigidBody 2D
-    public float swimSpeed = 1600f;
+    public float swimSpeed = 6000f;
     private float horizontalMove = 0f;
     private float verticalMove = 0f;
     public bool facingRight;
