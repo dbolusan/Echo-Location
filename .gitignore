@@ -1,5 +1,4 @@
 .vscode
-*.meta
 Assembly-CSharp.csproj
 Echo-Location.sln
 Library
