@@ -1,0 +1,5 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <ui:VisualElement style="height: 115px; width: 476px;">
+        <ui:Label text="Welcome traveler. &#10;You have reached the center.&#10;Answer three riddles and the&#10;treasure is yours" display-tooltip-when-elided="true" style="-unity-text-align: upper-center; font-size: 30px; -unity-font: none; -unity-font-style: normal; white-space: normal;" />
+    </ui:VisualElement>
+</ui:UXML>
