@@ -16,5 +16,11 @@ EditorBuildSettings:
     guid: ae4e8a1b2118696499a4ed9c51f884bd
   - enabled: 1
     path: Assets/Scenes/MazeScene.unity
-    guid: 819007780f0b449ffa57dcf1026c6e7c
+    guid: 1d1e1efe2e8383c4eba7f1bedd94958f
+  - enabled: 1
+    path: Assets/Scenes/Obstacle Course.unity
+    guid: 22c565539bcb24e9990a4e8104d4f0cc
+  - enabled: 1
+    path: Assets/Scenes/RiddleScene.unity
+    guid: b50a53a482e2b2b43868889a18377df8
   m_configObjects: {}
